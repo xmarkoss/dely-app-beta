@@ -1,264 +1,431 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dely App - Pagina principal</title>
-  <meta name="description" content="Pide comida, supermercado y más a domicilio en minutos." />
-  <link rel="stylesheet" href="/css/style_index.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="img/favicon-32x32.png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="img/favicon-16x16.png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="img/site.webmanifest">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dely App - Pagina principal</title>
+    <meta
+      name="description"
+      content="Pide comida, supermercado y más a domicilio en minutos."
+    />
+    <link rel="stylesheet" href="/css/style_index.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="img/favicon-32x32.png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="img/favicon-16x16.png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
 
-</head>
-<body class="antialiased text-gray-800">
-  <!-- Header BARRA DE NAVEGACION-->
-  <header class="sticky top-0 z-50 bg-white/90 glass">
-    <div class="mx-auto container flex items-center justify-between px-4 py-3">
-      <a href="#" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-xl"></div>
-        <img src="img/logo_dely.png" alt="Logo" class=" w-25 h-10">
-      </a>
-      <nav class="hidden md:flex items-center gap-6">
-        <a href="#categorias" class="hover:text-[var(--color-naranja-apagado)]">Categorías</a>
-        <a href="#como-funciona" class="hover:text-[var(--color-naranja-apagado)]">Cómo funciona</a>
-        <a href="#ciudades" class="hover:text-[var(--color-naranja-apagado)]">Ciudades</a>
-        <a href="#descarga" class="hover:text-[var(--color-naranja-apagado)]">Descarga la app</a>
-      </nav>
-      <div class="flex items-center gap-2">
-        <a class="btn hover:text-[var(--color-naranja-apagado)]" href="login.html">Iniciar sesión</a>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="antialiased text-gray-800">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Header BARRA DE NAVEGACION-->
+    <header class="sticky top-0 z-50 bg-white/90 glass">
+      <div
+        class="mx-auto container flex items-center justify-between px-4 py-3"
+      >
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl"></div>
+          <img src="img/logo_dely.png" alt="Logo" class="w-25 h-10" />
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a
+            href="#categorias"
+            class="hover:text-[var(--color-naranja-apagado)]"
+            >Categorías</a
+          >
+          <a
+            href="#como-funciona"
+            class="hover:text-[var(--color-naranja-apagado)]"
+            >Cómo funciona</a
+          >
+          <a href="#ciudades" class="hover:text-[var(--color-naranja-apagado)]"
+            >Ciudades</a
+          >
+          <a href="#descarga" class="hover:text-[var(--color-naranja-apagado)]"
+            >Descarga la app</a
+          >
+        </nav>
+        <div class="flex items-center gap-2">
+          <a
+            class="btn hover:text-[var(--color-naranja-apagado)]"
+            href="login.html"
+            >Iniciar sesión</a
+          >
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-<!-- 
+    <!-- 
   TERMINA LA BARRA DE NAVEGACION -->
 
-  <!-- Hero -->
-  <section class="hero-gradient">
-    <div class="mx-auto container px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="tag">Entrega en minutos</span>
-        <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
-          Todo lo que te gusta,<br class="hidden md:block" />
-          <span style="color: var(--color-naranja-apagado)">sin salir de casa</span>
-        </h1>
-        <p class="mt-4 text-lg text-gray-600">
-          Pide comida, supermercado, farmacia y más. Te lo llevamos a la puerta.
-        </p>
-        <form id="searchForm" class="bg-white rounded-3xl shadow-2xl p-6 max-w-3xl mx-auto">
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <div class="flex-1 relative w-full">
-              <label for="address" class="sr-only">Introduce tu dirección</label>
-              <div class="relative">
-                <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    <!-- Hero -->
+    <section class="hero-gradient">
+      <div
+        class="mx-auto container px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <span class="tag">Entrega en minutos</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
+            Todo lo que te gusta,<br class="hidden md:block" />
+            <span style="color: var(--color-naranja-apagado)"
+              >sin salir de casa</span
+            >
+          </h1>
+          <p class="mt-4 text-lg text-gray-600">
+            Pide comida, supermercado, farmacia y más. Te lo llevamos a la
+            puerta.
+          </p>
+          <form
+            id="searchForm"
+            class="bg-white rounded-3xl shadow-2xl p-6 max-w-3xl mx-auto"
+          >
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+              <div class="flex-1 relative w-full">
+                <label for="address" class="sr-only"
+                  >Introduce tu dirección</label
+                >
+                <div class="relative">
+                  <svg
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  <input
+                    id="address"
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-950 transition-all duration-200"
+                    placeholder="Introduce tu dirección (ej. Calle 123, Maracaibo)"
+                    required
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="bg-blue-950 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-200"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
                 </svg>
-                <input 
-                  id="address" 
-                  class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-950 transition-all duration-200"
-                  placeholder="Introduce tu dirección (ej. Calle 123, Maracaibo)"
-                  required
-                />
+                Buscar restaurantes
+              </button>
+            </div>
+          </form>
+
+          <p id="searchResult" class="mt-3 text-sm text-gray-500 hidden">
+            Mostrando opciones cerca de:
+            <span class="font-medium" id="addrOut"></span>
+          </p>
+
+          <!-- Chips categorías -->
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag">🌮 Comida</span>
+            <span class="tag">🛒 Supermercado</span>
+            <span class="tag">💊 Farmacia</span>
+            <span class="tag">🧝 Postres</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-soft">
+            <img
+              alt="Reparto a domicilio"
+              src="img/logo_dely.png"
+              class="w-full h-[230px] object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-soft border border-gray-200 hidden md:flex items-center gap-3"
+          >
+            <div class="icon-wrap">🚲</div>
+            <div>
+              <div class="font-semibold">Repartidor cercano</div>
+              <div class="text-sm text-gray-500">
+                Tiempo estimado: 15–25 min
               </div>
             </div>
-            <button type="submit" class="bg-blue-950 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-200">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-              Buscar restaurantes
-            </button>
-          </div>
-        </form>
-        
-        <p id="searchResult" class="mt-3 text-sm text-gray-500 hidden">
-          Mostrando opciones cerca de: <span class="font-medium" id="addrOut"></span>
-        </p>
-
-        <!-- Chips categorías -->
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="tag">🌮 Comida</span>
-          <span class="tag">🛒 Supermercado</span>
-          <span class="tag">💊 Farmacia</span>
-          <span class="tag">🧝 Postres</span>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="relative rounded-3xl overflow-hidden  shadow-soft">
-          <img alt="Reparto a domicilio" src="img/logo_dely.png" class="w-full h-[230px] object-cover" />
-        </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-soft border border-gray-200 hidden md:flex items-center gap-3">
-          <div class="icon-wrap">🚲</div>
-          <div>
-            <div class="font-semibold">Repartidor cercano</div>
-            <div class="text-sm text-gray-500">Tiempo estimado: 15–25 min</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Categorías -->
-  <section id="categorias" class="mx-auto container px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Explora por categorías</h2>
-    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-5">
-      <!-- Card -->
-      <a href="#" class="card hover:shadow-lg transition">
-        <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
-          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop" alt="Restaurantes" />
-        </div>
-        <h3 class="font-semibold">Restaurantes</h3>
-        <p class="text-sm text-gray-600 mt-1">Tus cadenas y locales favoritos.</p>
-      </a>
-      <a href="#" class="card hover:shadow-lg transition">
-        <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
-          <img class="w-full h-full object-cover" src="img/Mercado.jpeg" alt="Supermercado" />
-        </div>
-        <h3 class="font-semibold">Supermercado</h3>
-        <p class="text-sm text-gray-600 mt-1">Compra del mes o del minuto.</p>
-      </a>
-      <a href="#" class="card hover:shadow-lg transition">
-        <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
-          <img class="w-full h-full object-cover" src="img/Farmacia.jpg" alt="Farmacia" />
-        </div>
-        <h3 class="font-semibold">Farmacia</h3>
-        <p class="text-sm text-gray-600 mt-1">Lo esencial cuando lo necesitas.</p>
-      </a>
-      <a href="#" class="card hover:shadow-lg transition">
-        <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
-          <img class="w-full h-full object-cover" src="img/Regalos.jpg" alt="Regalos" />
-        </div>
-        <h3 class="font-semibold">Regalos</h3>
-        <p class="text-sm text-gray-600 mt-1">Sorprende en el momento.</p>
-      </a>
-    </div>
-  </section>
+    <!-- Categorías -->
+    <section id="categorias" class="mx-auto container px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-bold">Explora por categorías</h2>
+      <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <!-- Card -->
+        <a href="#" class="card hover:shadow-lg transition">
+          <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
+            <img
+              class="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurantes"
+            />
+          </div>
+          <h3 class="font-semibold">Restaurantes</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Tus cadenas y locales favoritos.
+          </p>
+        </a>
+        <a href="#" class="card hover:shadow-lg transition">
+          <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
+            <img
+              class="w-full h-full object-cover"
+              src="img/Mercado.jpeg"
+              alt="Supermercado"
+            />
+          </div>
+          <h3 class="font-semibold">Supermercado</h3>
+          <p class="text-sm text-gray-600 mt-1">Compra del mes o del minuto.</p>
+        </a>
+        <a href="#" class="card hover:shadow-lg transition">
+          <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
+            <img
+              class="w-full h-full object-cover"
+              src="img/Farmacia.jpg"
+              alt="Farmacia"
+            />
+          </div>
+          <h3 class="font-semibold">Farmacia</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Lo esencial cuando lo necesitas.
+          </p>
+        </a>
+        <a href="#" class="card hover:shadow-lg transition">
+          <div class="h-36 rounded-xl bg-gray-100 overflow-hidden mb-4">
+            <img
+              class="w-full h-full object-cover"
+              src="img/Regalos.jpg"
+              alt="Regalos"
+            />
+          </div>
+          <h3 class="font-semibold">Regalos</h3>
+          <p class="text-sm text-gray-600 mt-1">Sorprende en el momento.</p>
+        </a>
+      </div>
+    </section>
 
-  <!-- Cómo funciona con imágenes -->
-  <section id="como-funciona" class="bg-[var(--color-naranja-claro)]">
-    <div class="mx-auto container px-4 py-14">
-      <h2 class="text-2xl md:text-3xl font-bold">Como funciona?</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="card">
-          <img src="img/Ubicacion.jpg" alt="indica tu direccion" class="w-full h-40 object-cover rounded-xl mb-3">
-          <div class="icon-wrap ">📝</div>
-          <h3 class="mt-3 font-semibold">1. Indica tu dirección</h3>
-          <p class="text-sm">Te mostramos lo que hay cerca de ti.</p>
-        </div>
-        <div class="card">
-          <img src="img/Pagar.png" alt="Elige y paga" class="w-full h-40 object-cover rounded-xl mb-3">
-          <div class="icon-wrap rounded-lg">🛒</div>
-          <h3 class="mt-3 font-semibold">2. Elige y paga</h3>
-          <p class="text-sm">Métodos seguros y comprobantes claros.</p>
-        </div>
-        <div class="card">
-          <img src="img/Recibe.jpg" alt="Recibelo rapido" class="w-full h-40 object-cover rounded-xl mb-3">
-          <div class="icon-wrap rounded-lg">🚀</div>
-          <h3 class="mt-3 font-semibold">3. Recibelo rapido</h3>
-          <p class="text-sm">Seguimiento en tiempo real disponible.</p>
+    <!-- Cómo funciona con imágenes -->
+    <section id="como-funciona" class="bg-[var(--color-naranja-claro)]">
+      <div class="mx-auto container px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-bold">¿Como funciona?</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="card">
+            <img
+              src="img/Ubicacion.jpg"
+              alt="indica tu direccion"
+              class="w-full h-40 object-cover rounded-xl mb-3"
+            />
+            <div class=""><ion-icon name="map"></ion-icon></div>
+            <h3 class="mt-3 font-semibold">1. Indica tu dirección</h3>
+            <p class="text-sm">Te mostramos lo que hay cerca de ti.</p>
+          </div>
+          <div class="card">
+            <img
+              src="img/Pagar.png"
+              alt="Elige y paga"
+              class="w-full h-40 object-cover rounded-xl mb-3"
+            />
+            <div class=""><ion-icon name="card"></ion-icon></div>
+            <h3 class="mt-3 font-semibold">2. Elige y paga</h3>
+            <p class="text-sm">Métodos seguros y comprobantes claros.</p>
+          </div>
+          <div class="card">
+            <img
+              src="img/Recibe.jpg"
+              alt="Recibelo rapido"
+              class="w-full h-40 object-cover rounded-xl mb-3"
+            />
+            <div class=""><ion-icon name="rocket"></ion-icon></div>
+            <h3 class="mt-3 font-semibold">3. Recibelo rapido</h3>
+            <p class="text-sm">Seguimiento en tiempo real disponible.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Ciudades -->
-  <section id="ciudades" class="mx-auto container px-4 py-14">
-    <div class="flex items-center justify-between">
-      <h2 class="text-2xl md:text-3xl font-bold">Ciudades destacadas</h2>
-      <a href="#" class="text-sm hover:text-[var(--color-naranja-apagado)]">Ver todas →</a>
-    </div>
-    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-5">
-      <a class="card hover:shadow-lg transition" href="#">
-        <img src="img/Maracaibo.jpg" alt="Maracaibo" class="w-full h-32 object-cover rounded-xl mb-3">
-        <span class="font-semibold">Maracaibo</span>
-        <p class="text-sm">+1,200 locales</p>
-      </a>
-      <a class="card hover:shadow-lg transition" href="#">
-        <img src="img/Cabimas.jpg" alt="Cabimas" class="w-full h-32 object-cover rounded-xl mb-3">
-        <span class="font-semibold">Cabimas</span>
-        <p class="text-sm">+980 locales</p>
-      </a>
-      <a class="card hover:shadow-lg transition" href="#">
-        <img src="img/San-francisco.png" alt="San Francisco" class="w-full h-32 object-cover rounded-xl mb-3">
-        <span class="font-semibold">San Francisco</span>
-        <p class="text-sm">+560 locales</p>
-      </a>
-      <a class="card hover:shadow-lg transition" href="#">
-        <img src="img/ojeda.jpg" alt="Ciudad Ojeda" class="w-full h-32 object-cover rounded-xl mb-3">
-        <span class="font-semibold">Ciudad Ojeda</span>
-        <p class="text-sm">+430 locales</p>
-      </a>
-    </div>
-  </section>
+    <!-- Ciudades -->
+    <section id="ciudades" class="mx-auto container px-4 py-14">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">Ciudades destacadas</h2>
+        <a href="#" class="text-sm hover:text-[var(--color-naranja-apagado)]"
+          >Ver todas →</a
+        >
+      </div>
+      <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <a class="card hover:shadow-lg transition" href="#">
+          <img
+            src="img/Maracaibo.jpg"
+            alt="Maracaibo"
+            class="w-full h-32 object-cover rounded-xl mb-3"
+          />
+          <span class="font-semibold">Maracaibo</span>
+          <p class="text-sm">+1,200 locales</p>
+        </a>
+        <a class="card hover:shadow-lg transition" href="#">
+          <img
+            src="img/Cabimas.jpg"
+            alt="Cabimas"
+            class="w-full h-32 object-cover rounded-xl mb-3"
+          />
+          <span class="font-semibold">Cabimas</span>
+          <p class="text-sm">+980 locales</p>
+        </a>
+        <a class="card hover:shadow-lg transition" href="#">
+          <img
+            src="img/San-francisco.png"
+            alt="San Francisco"
+            class="w-full h-32 object-cover rounded-xl mb-3"
+          />
+          <span class="font-semibold">San Francisco</span>
+          <p class="text-sm">+560 locales</p>
+        </a>
+        <a class="card hover:shadow-lg transition" href="#">
+          <img
+            src="img/ojeda.jpg"
+            alt="Ciudad Ojeda"
+            class="w-full h-32 object-cover rounded-xl mb-3"
+          />
+          <span class="font-semibold">Ciudad Ojeda</span>
+          <p class="text-sm">+430 locales</p>
+        </a>
+      </div>
+    </section>
 
-  <!-- Descarga la app -->
-  <section id="descarga" class="bg-gray-50">
-    <div class="mx-auto container px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold">Llévanos en tu bolsillo</h2>
-        <p class="mt-2 text-gray-600">Descarga la app para pedir más rápido y seguir tus pedidos en tiempo real.</p>
-        <div class="mt-5 flex gap-3">
-          <a href="/" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
-          <a href="/" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45"/></a>
+    <!-- Descarga la app -->
+    <section id="descarga" class="bg-gray-50">
+      <div
+        class="mx-auto container px-4 py-14 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">
+            Llévanos en tu bolsillo
+          </h2>
+          <p class="mt-2 text-gray-600">
+            Descarga la app para pedir más rápido y seguir tus pedidos en tiempo
+            real.
+          </p>
+          <div class="mt-5 flex gap-3">
+            <a href="/" tabindex="0"
+              ><img
+                class="bn46"
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="bn45"
+            /></a>
+            <a href="/" tabindex="0"
+              ><img
+                class="bn45"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                alt="bn45"
+            /></a>
+          </div>
+        </div>
+        <div
+          class="rounded-3xl overflow-hidden border border-gray-100 shadow-soft"
+        >
+          <img
+            alt="App móvil"
+            src="img/App.jpg"
+            class="w-200 h-[900px] object-cover"
+          />
         </div>
       </div>
-      <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-soft">
-        <img alt="App móvil" src="img/App.jpg" class="w-200 h-[900px] object-cover" />
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="flex items-center gap-2">
+            <img src="img/logo_dely.png" alt="Logo" class="footer-logo" />
+          </div>
+          <p class="footer-text">
+            Entrega de lo que te gusta, cuando lo necesitas.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Empresa</h4>
+          <ul class="footer-list">
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Prensa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-list">
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Terminos</a></li>
+            <li><a href="#">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Siguenos</h4>
+          <ul class="footer-list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter/X</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+      <p class="footer-copyright">
+        &copy; 2025 Dely. Todos los derechos reservados.
+      </p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer-main">
-    <div class="footer-container">
-        <div class="footer-col">
-            <div class="flex items-center gap-2">
-                <img src="img/logo_dely.png" alt="Logo" class="footer-logo">
-            </div>
-            <p class="footer-text">Entrega de lo que te gusta, cuando lo necesitas.</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-title">Empresa</h4>
-            <ul class="footer-list">
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Carreras</a></li>
-                <li><a href="#">Prensa</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-title">Soporte</h4>
-            <ul class="footer-list">
-                <li><a href="#">Centro de ayuda</a></li>
-                <li><a href="#">Terminos</a></li>
-                <li><a href="#">Privacidad</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-title">Siguenos</h4>
-            <ul class="footer-list">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter/X</a></li>
-                <li><a href="#">TikTok</a></li>
-            </ul>
-        </div>
-    </div>
-    <p class="footer-copyright"> &copy; 2025 Dely. Todos los derechos reservados.</p>
-</footer>
-
-  <!-- Script demo -->
-  <script>
-    const form = document.getElementById('searchForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const addr = document.getElementById('address').value.trim();
-      if (!addr) return;
-      document.getElementById('addrOut').textContent = addr;
-      document.getElementById('searchResult').classList.remove('hidden');
-    });
-  </script>
-</body>
+    <!-- Script demo -->
+    <script>
+      const form = document.getElementById("searchForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const addr = document.getElementById("address").value.trim();
+        if (!addr) return;
+        document.getElementById("addrOut").textContent = addr;
+        document.getElementById("searchResult").classList.remove("hidden");
+      });
+    </script>
+  </body>
 </html>
