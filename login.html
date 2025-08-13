@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio y Registro</title>
+    <link rel="stylesheet" href="css/style_login.css">
+    <!-- Agregar el CSS de index para la barra de navegación -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header class="sticky top-0 z-50 bg-white/90 glass">
+    <div class="navbar">
+        <a href="index.html"><img src="img/logo_dely.png" alt="Logo Dely" class="logo"></a>
+    </div>
+</header>
+
+<div class="main-content">
+    <div class="container">
+        <div class="container-form">
+            <form class="sign-in">
+                <h2>Iniciar Sesión</h2>
+                <div class="social-networks">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                </div>
+                <span>Use su correo y contraseña!</span>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" placeholder="Correo electronico">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                
+                <button class="button" >INICIAR SESIÓN</button>
+            </form>
+        </div>
+        <div class="container-form">
+            <form class="sign-up">
+                <h2>Registrarse</h2>
+                    <div class="social-networks">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                </div>
+                <span>Use su correo electronico para registrarse!</span>
+                    <div class="container-input">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="container-input">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input type="text" placeholder="Apellido">
+                    </div>
+                    <div class="container-input">
+                    <ion-icon name="medical"></ion-icon>
+                    <input type="text" placeholder="Cedula">
+                    </div>
+                    <div class="container-input">
+                    <ion-icon name="map"></ion-icon>
+                    <input type="text" placeholder="Direccion">
+                    </div>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" placeholder="Correo electronico">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" placeholder="Repetir contraseña">
+                </div>
+                <button class="button" >REGISTRARSE</button>
+            </form>
+        </div>
+    
+        <div class="container-welcome">
+            <div class="welcome-sign-up welcome">
+                <h3>Bienvenido!</h3>
+                <p>Registrate con tus datos personales para empezar!</p>
+                <button class="button" id="btn-sign-up">Registrarse</button>
+            </div>
+            <div class="welcome-sign-in welcome">
+                <h3>Hola!</h3>
+                <p>Ingresa tus datos personales para comenzar a usar las funciones del sitio!</p>
+                <button class="button" id="btn-sign-in">Iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer-main">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="flex items-center gap-2">
+                <img src="img/logo_dely.png" alt="Logo" class="footer-logo">
+            </div>
+            <p class="footer-text">Entrega de lo que te gusta, cuando lo necesitas.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">Empresa</h4>
+            <ul class="footer-list">
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Carreras</a></li>
+                <li><a href="#">Prensa</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">Soporte</h4>
+            <ul class="footer-list">
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">Síguenos</h4>
+            <ul class="footer-list">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter/X</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer-copyright"> &copy; 2025 Dely. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
